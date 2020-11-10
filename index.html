@@ -1,49 +1,25 @@
-<!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js" lang="en">
-<!--<![endif]-->
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>管理系统</title>
-    <meta name="description" content="青锐通用管理系统UI界面">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="apple-touch-icon" href="apple-icon.png">
-    <link rel="shortcut icon" href="favicon.ico">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>系统首页</title>
+    <!--基础-->
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css">    
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
     <link href="/lib/fonticon/iconfont.css" rel="stylesheet" />
     <script src="/lib/fonticon/iconfont.js"></script>
-    <link rel="stylesheet" href="/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css">
-
-
-
-    <script src="/lib/jquery/dist/jquery.min.js"></script>
-    <script src="/lib/layer/layer.js"></script>
+    <!--表单-->
+    <script src="/lib/jquery-form/jquery.form.min.js"></script>
     <script src="/lib/jquery-validation/dist/jquery.validate.min.js"></script>
     <script src="/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
-    <script src="/lib/jquery-form/jquery.form.min.js"></script>
-    
-    <!--style.css-->
-    <link href="/css/animate.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/css/admin3.css">
-    <link rel="stylesheet" href="/css/admin.css">
-    <script>
-        if (top.location != location) {
-            console.log(location);
-            top.location.href = location.href;
-        }
-    </script>
-    
-    
+    <!--页面-->
+    <link rel="stylesheet" href="/css/admin.bootstrap.css">
+    <link rel="stylesheet" href="/css/admin.layout.css">
 </head>
-<body class="fixedNav">
+<body>
     <!-- Left Panel -->
-
     <aside id="left-panel" class="left-panel">
         <nav class="navbar navbar-expand-sm navbar-default">
 
@@ -60,14 +36,17 @@
                     <li class="active">
                         <a href="index.html"> <i class="menu-icon fa fa-dashboard"></i>总览 </a>
                     </li>
-                    <h3 class="menu-title">内容管理</h3><!-- /.menu-title -->
+                    <h3 class="menu-title">内容管理</h3>
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>内容发布管理</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Buttons</a></li>
-                            <li><i class="fa fa-id-badge"></i><a href="ui-badges.html">Badges</a></li>
-                            <li><i class="fa fa-bars"></i><a href="ui-tabs.html">Tabs</a></li>
+                            <li><i class="fa fa-puzzle-piece"></i><a href="list.html">内容管理</a></li>
+                            <li><i class="fa fa-id-badge"></i><a href="form.html">新增</a></li>
+                            <li><i class="fa fa-bars"></i><a href="dialog.html" class="DlgLink">弹窗表单</a></li>
+                            <li><i class="fa fa-id-card-o"></i><a href="list2.html">Email</a></li>
+                            <li><i class="fa fa-id-card-o"></i><a href="list3.html">内容列表</a></li>
                             <li><i class="fa fa-share-square-o"></i><a href="ui-social-buttons.html">Social Buttons</a></li>
+                            
                             <li><i class="fa fa-id-card-o"></i><a href="ui-cards.html">Cards</a></li>
                             <li><i class="fa fa-exclamation-triangle"></i><a href="ui-alerts.html">Alerts</a></li>
                             <li><i class="fa fa-spinner"></i><a href="ui-progressbar.html">Progress Bars</a></li>
@@ -92,7 +71,7 @@
                         </ul>
                     </li>
 
-                    <h3 class="menu-title">用户/互动/营销</h3><!-- /.menu-title -->
+                    <h3 class="menu-title">用户/互动/营销</h3>
 
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-tasks"></i>用户管理</a>
@@ -117,7 +96,7 @@
                             <li><i class="menu-icon fa fa-street-view"></i><a href="maps-vector.html">Vector Maps</a></li>
                         </ul>
                     </li>
-                    <h3 class="menu-title">系统设置</h3><!-- /.menu-title -->
+                    <h3 class="menu-title">系统设置</h3>
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-glass"></i>基本设置</a>
                         <ul class="sub-menu children dropdown-menu">
@@ -135,237 +114,335 @@
                         </ul>
                     </li>
                 </ul>
-            </div><!-- /.navbar-collapse -->
+            </div>
         </nav>
-    </aside><!-- /#left-panel -->
-    <!-- Left Panel -->
-    <div id="right-panel" class="right-panel">
-
+    </aside>
+    <!-- /#left-panel -->
+    <div id="right-panel"   class="right-panel">
         <!-- Header-->
-        <header id="header" class="header clearfix">
-              
-            <div class="header-menu clearfix">
+        <header id="header" class="header fixed-top clearfix">              
+            <div class="pull-left">
+                <button id="menuToggle" class="btn btn-default menutoggle pull-left"><i class="fa fa fa-bars"></i></button>
+            </div>
+            <div class="pull-right">
+                <ul>
+                    <li>
+                        <button type="button"  class="btn btn-default btn-fullscreen  ">
+                            <i class="fa fa-arrows-alt"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button type="button"  class="btn btn-default dropdown-toggle"  data-toggle="dropdown">
+                                <i class="fa fa-bell-o" aria-hidden="true"></i>
+                                <span class="count bg-danger">9</span>
+                            </button>
+                            <div class="dropdown-menu noticemenu" >
+                                 <h5 class="title">消息中心</h5>
+                                 <ul>
+                                    <li>
+                                        <a href="">
+                                            <span class="badge badge-danger">4</span>
+                                            @我的
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <span class="badge badge-danger">4</span>
+                                            待审的文章
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <span class="badge badge-danger">4</span>
+                                            待审的评论
+                                        </a>
+                                    </li> 
+                                    <li>
+                                        <a href="">
+                                            <span class="badge badge-danger">4</span>
+                                            收到的赞
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <span class="badge badge-danger">4</span>
+                                            我的消息
+                                        </a>
+                                    </li> 
+                                    <li>
+                                        <a href="">
+                                            <span class="badge badge-danger">4</span>
+                                            系统通知
+                                        </a>
+                                    </li>
+                                 </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown  user-area">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                <img class="avatar-img" src="/images/avatar/7.jpg" alt="">
+                                <span class="user-avatar">张三丰 <span class="caret"></span></span>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownUserMenu">
+                                <a class="dropdown-item" href="#"><i class="fa fa-user" aria-hidden="true"></i> 个人中心</a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> 修改资料</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i> 退出登录</a>
+                              </div>
+                          </div>
 
-                <div class="col-sm-7">
-                    <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-bars"></i></a>
-                    <div class="header-left">
-                        <!--工具栏区域-->
-                        <ul>
-                            <!--<li>
-                                <button  class="btn btn-block searchBtn search-trigger" >
-                                    <i class="fa fa-search" aria-hidden="true"></i>
-                                </button>
-                                <div class="form-inline">
-                                    <form class="search-form">
-                                        <input class="form-control mr-sm-2" type="text" placeholder="Search ..." aria-label="Search">
-                                        <button class="search-close" type="submit"><i class="fa fa-close"></i></button>
-                                    </form>
-                                </div>
-                            </li>-->
-                            
-                            <li>
-                                <a href="/"  class="btn btn-block" >
-                                    <i class="fa fa-desktop" aria-hidden="true"></i>
-                                </a>
-                            </li>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <!-- / Header-->
+        <div class="content pd-15">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="alert  alert-success alert-dismissible fade show" role="alert">
+                         <i class="fa fa-check" aria-hidden="true"></i> 页面操作成功啦.
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
 
-                            <li>
-                                <div class="dropdown">
-                                    <button type="button"  class="btn btn-block dropdown-toggle" id="toptoolNotice"  data-toggle="dropdown">
-                                        <i class="fa fa-bell" aria-hidden="true"></i>
-                                        <span class="count bg-danger">9</span>
-                                    </button>
-                                    <div class="dropdown-menu noticemenu" aria-labelledby="toptoolNotice">
-                                         <h5 class="title">消息中心</h5>
-                                         <ul>
-                                            <li>
-                                                <a href="">
-                                                    <span class="badge badge-danger">4</span>
-                                                    @我的
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="">
-                                                    <span class="badge badge-danger">4</span>
-                                                    待审的文章
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="">
-                                                    <span class="badge badge-danger">4</span>
-                                                    待审的评论
-                                                </a>
-                                            </li> 
-                                            <li>
-                                                <a href="">
-                                                    <span class="badge badge-danger">4</span>
-                                                    收到的赞
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="">
-                                                    <span class="badge badge-danger">4</span>
-                                                    我的消息
-                                                </a>
-                                            </li> 
-                                            <li>
-                                                <a href="">
-                                                    <span class="badge badge-danger">4</span>
-                                                    系统通知
-                                                </a>
-                                            </li>
-                                         </ul>
-                                    </div>
-                                </div>
+            <div class="row">
+                <div class="col-sm-6 col-lg-3">
+                    <div class="card card-simple card-stat">
+                        <div class="card-body">
+                            <div class="pull-left">
+                                <p href="/" class="icon_bg">
+                                    <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                                </p>
+                            </div>
+                            <div class="pull-right">
+                                <p class="h6 m-t-0">本月发布</p>
+                                <p class="h3 m-b-0 ">102,125.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-sm-6 col-lg-3">
+                    <div class="card card-simple card-stat card-stat-green">
+                        <div class="card-body">
+                            <div class="pull-left">
+                                <p href="/" class="icon_bg">
+                                    <i class="fa fa-tasks" aria-hidden="true"></i>
+                                </p>
+                            </div>
+                            <div class="pull-right">
+                                <p class="h6 m-t-0">待审文章</p>
+                                <p class="h3 m-b-0">102,125.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-3">
+                    <div class="card card-simple card-stat card-stat-pink">
+                        <div class="card-body">
+                            <div class="pull-left">
+                                <p href="/" class="icon_bg">
+                                    <i class="fa fa-user-o" aria-hidden="true"></i>
+                                </p>
+                            </div>
+                            <div class="pull-right">
+                                <p class="h6 m-t-0">用户总数</p>
+                                <p class="h3 m-b-0">102,125.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-3">
+                    <div class="card card-simple card-stat card-stat-orange">
+                        <div class="card-body">
+                            <div class="pull-left">
+                                <p href="/" class="icon_bg">
+                                    <i class="fa fa-comment-o" aria-hidden="true"></i>
+                                </p>
+                            </div>
+                            <div class="pull-right">
+                                <p class="h6 m-t-0">用户留言</p>
+                                <p class="h3 m-b-0">102,125.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="card card-simple">
+                        <div class="card-header">
+                            月度发布量
+                        </div>
+                        <div class="card-body">
+                            <div class="chart_line" id="chart_line" style="height: 288px;">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="card systemInfo">
+                        <div class="card-body">
+                            <table class="table">
+                                <tr>
+                                    <th>系统名称</th>
+                                    <td>青锐CMS内容管理系统</td>
+                                </tr>
                                 
-                            </li>
-                            <li>
-                                <a href="/" class="btn btn-block" title="打开手机版">
-                                    <i class="fa fa-wechat"  ></i>
-                                </a>
-                            </li>
-                            <li>
-                                <div class="dropdown">
-                                    <button type="button"  class="btn btn-block dropdown-toggle" id="toptoolMessage"  data-toggle="dropdown">
-                                        <i class="iconfont" >&#xe6b2;</i>
-                                    </button>
-                                    <div class="dropdown-menu" aria-labelledby="toptoolMessage">
-                                        <a class="dropdown-item" href="#"><i class="fa fa-square" style="color: blue;" ></i> 默认皮肤</a>
-                                    </div>
-                                </div>
-                                
-                            </li>
-                        </ul>
+                                <tr>
+                                    <th>内核版本</th>
+                                    <td>v1.0 <span class="badge badge-pill badge-success">体验版</span></td>
+                                </tr>
+                                <tr>
+                                    <th>服务器IP</th>
+                                    <td>127.0.0.1</td>
+                                </tr>
+                                <tr>
+                                    <th>开发团队</th>
+                                    <td><a href="http://www.qingrui.vip">青锐信息科技</a></td>
+                                </tr>
+                                <tr>
+                                    <th>操作系统</th>
+                                    <td><a href="http://www.qingrui.vip">青锐信息科技</a></td>
+                                </tr> 
+                                <tr>
+                                    <th>定制版本</th>
+                                    <td><a href="http://www.qingrui.vip">东营编办 2020</a></td>
+                                </tr> 
+                            </table>
+                        </div> 
                         
                     </div>
                 </div>
 
-                <div class="col-sm-5">
-                    <!--用户信息区域-->
-                    <div class="nav-usertoolbox">
-                        <!--工具-->
-                        <ul> 
-                             
-                            
-                            <li  class="usermenu">
-                                <div class="dropdown">
-                                    <a class="btn btn-block dropdown-toggle" href="#" role="button" id="dropdownUserMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <img src="/images/avatar/7.jpg" alt="" class="avatar-sm">
-                                        李永波
-                                    </a>                              
-                                    <div class="dropdown-menu" aria-labelledby="dropdownUserMenu">
-                                      <a class="dropdown-item" href="#"><i class="fa fa-user" aria-hidden="true"></i> 个人中心</a>
-                                      <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> 修改资料</a>
-                                      <div class="dropdown-divider"></div>
-                                      <a class="dropdown-item" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i> 退出登录</a>
-                                    </div>
-                                  </div>
-                            </li>
-                            
-                        </ul>
-                        <!--/工具-->
-                    </div> 
+
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-5 col-md-12 col-sm-12">
+                    <div class="card card-simple">
+                        <div class="card-header">
+                            各部门发布量 Top 5
+                        </div>
+                        <div class="card-body">
+                            <div id="chart_orgs" style="height: 300px;">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-12 col-sm-12">
+                    <div class="card card-simple">
+                        <div class="card-header">
+                            最近发布
+                        </div>
+                        <div class="card-body"> 
+                                <div class="table-responsive">
+                                  <table class="table table-hover">
+                                    <thead>
+                                      <tr>
+                                        <th>#</th>
+                                        <th>项目名称</th>
+                                        <th>开始日期</th>
+                                        <th>截止日期</th>
+                                        <th>状态</th>
+                                        <th>进度</th></tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>1</td>
+                                        <td>设计新主题</td>
+                                        <td>10/02/2019</td>
+                                        <td>12/05/2019</td>
+                                        <td>
+                                          <span class="label label-warning">待定</span></td>
+                                        <td>
+                                          <div class="progress progress-striped progress-sm">
+                                            <div class="progress-bar progress-bar-warning" style="width: 45%;"></div>
+                                          </div>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>2</td>
+                                        <td>网站重新设计</td>
+                                        <td>01/03/2019</td>
+                                        <td>12/04/2019</td>
+                                        <td>
+                                          <span class="label label-success">进行中</span></td>
+                                        <td>
+                                          <div class="progress progress-striped progress-sm">
+                                            <div class="progress-bar progress-bar-success" style="width: 30%;"></div>
+                                          </div>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>3</td>
+                                        <td>模型设计</td>
+                                        <td>10/10/2019</td>
+                                        <td>12/11/2019</td>
+                                        <td>
+                                          <span class="label label-warning">待定</span></td>
+                                        <td>
+                                          <div class="progress progress-striped progress-sm">
+                                            <div class="progress-bar progress-bar-warning" style="width: 25%;"></div>
+                                          </div>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>4</td>
+                                        <td>后台管理系统模板设计</td>
+                                        <td>25/01/2019</td>
+                                        <td>09/05/2019</td>
+                                        <td>
+                                          <span class="label label-success">进行中</span></td>
+                                        <td>
+                                          <div class="progress progress-striped progress-sm">
+                                            <div class="progress-bar progress-bar-success" style="width: 55%;"></div>
+                                          </div>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>5</td>
+                                        <td>前端设计</td>
+                                        <td>10/10/2019</td>
+                                        <td>12/12/2019</td>
+                                        <td>
+                                          <span class="label label-danger">未开始</span></td>
+                                        <td>
+                                          <div class="progress progress-striped progress-sm">
+                                            <div class="progress-bar progress-bar-danger" style="width: 0%;"></div>
+                                          </div>
+                                        </td>
+                                      </tr> 
+                                       
+                                    </tbody>
+                                  </table> 
+                              </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-          
-        </header><!-- /header -->
-        <!-- Header-->
-       
-        <!--
-     <div class="breadcrumbs">
-         <div class="col-sm-4">
-             <div class="page-header float-left">
-                 <div class="page-title">
-                     <h1>总览</h1>
-                 </div>
-             </div>
-         </div>
-         <div class="col-sm-8">
-             <div class="page-header float-right">
-                 <div class="page-title">
-                     <ol class="breadcrumb text-right">
-                         <li><a href="#">总览</a></li>
-                         <li class="active">首页</li>
-                     </ol>
-                 </div>
-             </div>
-         </div>
-     </div>
-    -->
-        <div style="height: 63px;clear: both;"></div>
-        <div class="content mt-3">
-            <div class="col-sm-12">
-                <div class="alert  alert-success alert-dismissible fade show" role="alert">
-                    <span class="badge badge-pill badge-success"><i class="fa fa-check" aria-hidden="true"></i></span> 页面操作成功啦.
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-            </div>
-            <div class="col-sm-12">
-                <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                    <span class="badge badge-pill badge-danger"><i class="fa fa-exclamation" aria-hidden="true"></i></span> 页面操作成功啦.
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-            </div>
 
-            <!--Pannel-->
-            <div class="col-sm-6">
-                <div class="card card_fill">
-                    <div class="card-header">网站概况</div>
-                    <div class="card-body generalStatistics">
-                        <div class="d-inline-flex p-1 flex-nowrap  text-white" style="width: 100%;">
-                            <div class="cell p-2 flex-fill">
-                                <p class="num">78</p> 
-                                <p class="name">本周发布</p> 
-                            </div>
-                            <div class="cell p-2  flex-fill">
-                                <p class="num">78</p> 
-                                <p class="name">本月发布</p> 
-                            </div>
-                            <div class="cell p-2  flex-fill">
-                                <p class="num">78</p> 
-                                <p class="name">本年发布</p> 
-                            </div>
-                          </div>
-                          <div class="d-inline-flex  p-1 flex-nowrap text-white" style="width: 100%;">
-                            <div class="cell p-2   flex-fill">
-                                <p class="num">78</p> 
-                                <p class="name">用户总量</p> 
-                            </div>
-                            <div class="cell p-2  flex-fill">
-                                <p class="num">78</p> 
-                                <p class="name">今日注册</p> 
-                            </div>
-                            <div class="cell p-2  flex-fill">
-                                <p class="num">78</p> 
-                                <p class="name">本月注册</p> 
-                            </div>
-                          </div>
-                    </div> 
-                  </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-header">头部</div>
-                    <div class="card-body">内容</div> 
-                  </div>
-            </div>
-        </div><!-- .content -->
-
-
-
-
+        </div>
     </div>
 
 
-    
+    <script src="/lib/echarts/dist/echarts.min.js"></script>
+    <script src="/js/chart.js"></script>
     <script src="/lib/popper/popper.min.js"></script>
     <script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="/js/admin.framework.js"></script>
     <script src="/lib/jquery-cookie/jquery.cookie.js"></script>
-    
 </body>
 </html>

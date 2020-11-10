@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>系统登录</title>
+    <link rel="shortcut icon" type="image/icon" href="/favicon.png" />
+    <!--基础-->
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css">    
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <link href="/lib/fonticon/iconfont.css" rel="stylesheet" />
+    <script src="/lib/fonticon/iconfont.js"></script>
+    <!--表单-->
+    <script src="/lib/jquery-form/jquery.form.min.js"></script>
+    <script src="/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <!--页面-->
+    <link rel="stylesheet" href="/css/admin.login.css">  
+</head>
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">浏览器版本过低，请使用Chrome、Edge、火狐或极速模式。</p>
+        <![endif]-->
+    <!-- signin end -->
+    <section class="signin signup popup-up">
+        <div class="container">
+
+            <div class="sign-content popup-in-content">
+                <div class="popup-in-txt">
+                    <h2>用户登录</h2>
+                    <div class="validation-summary-valid" data-valmsg summary="true">
+                        <ul>
+                            <li style="display: none"></li>
+
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="signin-form">
+                                <form action="" method="post" id="pageForm" class="pageDefaultForm">
+                                    <div class="form-group">
+                                        <label for="signin_form">用户名/手机号</label>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"> <i class="fa fa-user-circle-o"></i> </span>
+                                            </div>
+                                            <input type="text" class="form-control" id="UserName" name="UserName" data-val-required="用户名不能为空！" data-val="true" placeholder="请输入用户名或手机号码"><span class="valmsg" data-valmsg-for="UserName" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="signin_form">密码</label>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"> <i class="fa fa-keyboard-o"></i> </span>
+                                            </div>
+                                            <input type="password" class="form-control" id="Password" name="Password" placeholder="请输入密码" data-val-length-min="8" data-val-length="密码必须至少包含 8 个字符。" data-val-required="密码不能为空！"  data-val="true">
+                                            <span class="valmsg" data-valmsg-for="Password" data-valmsg-replace="true">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="signin_form">验证码</label>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"> <i class="fa fa-code"></i> </span>
+                                            </div>
+                                            <input type="text" class="form-control" id="VerifyCode" placeholder="请输入验证码" name="VerifyCode" data-val-length-min="4" data-val-length="验证码必须为 4-6 个字符。"  data-val-length-max="6"  data-val-required="验证码不能为空！"  data-val="true">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text vcimg">
+                                                    <img src="/Home/VerifyCode" style="" title="点击刷新" onclick="this.src='/Home/VerifyCode'" />
+                                                </span>
+                                            </div>
+                                            <span class="valmsg" data-valmsg-for="VerifyCode" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8AUm-RfM5u5Dv_opzu02soM8-63WlD1dS06VURH7XwPzsPNDSbPN-evCo8bpvlWYyiWcrfIramx81aiU-4PvJFqo9oQhvs0LYquxobeIgeL1KHkWcwmhIadXFe9ZX7zYTi5gW-ZpcmeFxrh5cdy1jS0" /></form>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="signin-password">
+                                <div class="awesome-checkbox-list">
+                                    <ul class="unstyled centered">
+
+                                        <li>
+                                            <input class="styled-checkbox" id="styled-checkbox-2" type="checkbox" value="value2">
+                                            <label for="styled-checkbox-2">记住密码</label>
+                                        </li>
+
+                                        <li></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+         
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="signin-footer">
+                                <button type="submit" class="btn signin_btn" onclick="$('#pageForm').submit()">
+                                    登录
+                                </button>
+                            </div><!--/.signin-footer -->
+                        </div><!--/.col-->
+                    </div><!--/.row -->
+
+
+                </div><!-- .popup-in-txt -->
+            </div><!--/.sign-content -->
+        </div><!--/.container -->
+
+    </section><!--/.signin -->
+    <!-- signin end -->
+
+
+    <script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+     
+    <!--Custom JS-->
+    <script src="/js/admin/common.js"></script>
+    <script src="/js/admin/common.form.js"></script>
+    <script src="/js/admin/site.js"></script>
+</body>
+</html>

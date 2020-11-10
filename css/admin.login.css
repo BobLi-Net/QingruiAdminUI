@@ -1,0 +1,353 @@
+.browserupgrade{
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	font-size: 14px;
+	font-weight: bold;
+	color: #f00;
+	background-color: #ffeebe;
+	padding: 12px;
+}
+body {
+	background: url(/images/loginbg.jpg) no-repeat center center;
+	background-size: cover;
+	background-attachment: fixed;
+	background-color: #ccc
+}
+
+a,a:active,a:focus,a:hover {
+	display: inline-block;
+	text-decoration: none;
+	color: #7c8089;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 0
+}
+
+h1,h2,h3,h4,h5,h6 {
+	margin: 0;
+	color: #464d5f;
+	font-family: Poppins,sans-serif;
+	text-transform: capitalize;
+	font-weight: 400
+}
+
+p {
+	margin: 0;
+	line-height: 28px;
+	color: #97a0ba;
+	font-size: 16px;
+	font-family: Poppins,sans-serif
+}
+
+img {
+	border: none;
+	max-width: 100%;
+	height: auto
+}
+
+ul {
+	padding: 0;
+	margin: 0 auto;
+	list-style: none
+}
+
+ul li {
+	list-style: none
+}
+
+.form-control,button,input,select,textarea {
+	box-shadow: none;
+	outline: 0!important
+}
+
+body,html {
+	height: 100%;
+	position: relative;
+	z-index: 2
+}
+[placeholder]:focus::-webkit-input-placeholder {
+	-webkit-transition: opacity .3s .3s ease;
+	-moz-transition: opacity .3s .3s ease;
+	-ms-transition: opacity .3s .3s ease;
+	-o-transition: opacity .3s .3s ease;
+	transition: opacity .3s .3s ease;
+	opacity: 0
+}
+
+.field-validation-error>span,.field-validation-valid>span {
+	position: absolute;
+	left: 40px;
+	bottom: -35px;
+	padding: 8px 12px;
+	background: #fb4f07;
+	color: #fff;
+	font-size: 14px;
+	box-shadow: #ccc 3px 3px 3px;
+	z-index: 999;
+	border-radius: 5px
+}
+
+.field-validation-error>span:before,.field-validation-valid>span:before {
+	content: "";
+	position: absolute;
+	z-index: 1;
+	top: -5px;
+	left: 12px;
+	border-top: 0;
+	border-right: 5px solid transparent;
+	border-bottom: 5px solid #f03040;
+	border-left: 5px solid transparent
+}
+
+.signin {
+	padding: 216px 0
+}
+
+.signin.signup {
+	padding: 160px 0
+}
+
+.sign-content {
+	max-width: 520px;
+	margin: 0 auto
+}
+
+.sign-content h2 {
+	color: #464d5f;
+	font-size: 36px;
+	text-align: center;
+	margin-bottom: 35px
+}
+
+.signin-form .form-control {
+	background: 0 0;
+	border: transparent;
+	border: 1px solid #c3c6cf;
+	border-radius: 3px;
+	outline: 0!important;
+	box-shadow: none;
+	padding: 0 0;
+	height: 46px;
+	-webkit-transition: linear .5s;
+	-moz-transition: linear .5s;
+	-ms-transition: linear .5s;
+	-o-transition: linear .5s;
+	transition: linear .5s
+}
+
+.signin-form .form-control:focus,.signin-form .form-control:hover {
+	border: 1px solid #474d5b;
+	color: #464e60;
+	box-shadow: 0 5px 10px rgba(45,50,64,.2)
+}
+
+.signin-form label {
+	color: #666;
+	font-size: 16px;
+	font-weight: 700;
+	text-transform: capitalize;
+	margin-bottom: 15px;
+	display: none
+}
+
+.signin-form input[type=email],.signin-form input[type=password],.signin-form input[type=text] {
+	color: #464e60;
+	font-size: 16px;
+	font-weight: 400;
+	text-transform: capitalize;
+	padding: 0 18px
+}
+
+.signin-form .form-col {
+	width: 48.5%;
+	float: left
+}
+
+.signin-form .form-col1 {
+	width: 48%;
+	float: right
+}
+
+.styled-checkbox {
+	position: absolute;
+	opacity: 0;
+	-webkit-transition: ease-in-out .3s;
+	-moz-transition: ease-in-out .3s;
+	-ms-transition: ease-in-out .3s;
+	-o-transition: ease-in-out .3s;
+	transition: ease-in-out .3s
+}
+
+.awesome-checkbox-list a,.styled-checkbox+label {
+	position: relative;
+	cursor: pointer;
+	padding: 0;
+	color: #91949c;
+	font-size: 14px;
+	font-weight: 400;
+	text-transform: capitalize
+}
+
+.styled-checkbox+label:before {
+	position: relative;
+	top: -3px;
+	content: '';
+	margin-right: 16px;
+	display: inline-block;
+	vertical-align: text-top;
+	width: 25px;
+	height: 25px;
+	background: 0 0;
+	border: 1px solid #ebebeb
+}
+
+.styled-checkbox:hover+label:before {
+	background: #fff;
+	box-shadow: 2px 3px 15px rgba(45,50,64,.25)
+}
+
+.styled-checkbox:checked+label:before {
+	background: #fff;
+	box-shadow: none
+}
+
+.styled-checkbox:checked+label:after {
+	content: '';
+	position: absolute;
+	left: 8px;
+	top: 9px;
+	background: #5a84fd;
+	width: 2px;
+	height: 2px;
+	box-shadow: 2px 0 0 #5a84fd,4px 0 0 #5a84fd,4px -2px 0 #5a84fd,4px -4px 0 #5a84fd,4px -6px 0 #5a84fd,4px -8px 0 #5a84fd;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+	transform: rotate(45deg)
+}
+
+.unstyled li {
+	display: inline-block;
+	margin: 10px 10px 10px 0;
+	float: left
+}
+
+.centered {
+	max-width: 620px;
+	margin: auto
+}
+
+.title {
+	text-align: center;
+	color: #4571ec
+}
+
+.unstyled li:last-child {
+	float: right
+}
+
+.btn.signin_btn,.btn.signin_btn:focus {
+	width: 320px;
+	padding: 0;
+	height: 50px;
+	background: #2b5ef3;
+	color: #fff;
+	font-size: 14px;
+	text-transform: uppercase;
+	border-radius: 3px;
+	box-shadow: 0 5px 30px rgba(0,66,255,.3);
+	margin-top: 23px
+}
+
+.signin-footer {
+	text-align: center;
+	padding-top: 10px
+}
+
+.signin-footer p {
+	color: #91949c;
+	font-size: 16px;
+	max-width: 265px;
+	margin: 35px auto
+}
+
+.signin-footer p>a {
+	color: #7c8089;
+	font-size: 16px;
+	font-weight: 500;
+	text-transform: capitalize
+}
+
+.modal-content {
+	max-width: 620px;
+	margin: 0 auto;
+	padding: 60px 0
+}
+
+.modal-body {
+	position: relative;
+	padding: 0
+}
+
+.modal-content .centered,.modal-content .sign-content {
+	max-width: 500px;
+	margin: 0 auto
+}
+
+.modal-content .btn.signin_btn,.modal-content .btn.signin_btn:focus {
+	width: 300px
+}
+
+.modal-header {
+	padding: 0;
+	border-bottom: transparent;
+	margin-left: 0
+}
+
+.signin.popup-in {
+	padding: 146px 0
+}
+
+.signin.popup-in,.signin.signup.popup-up {
+	position: relative;
+	z-index: 1
+}
+
+.signin.popup-in:before,.signin.signup.popup-up:before {
+	position: absolute;
+	content: " ";
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0);
+	z-index: -1
+}
+
+.sign-content.popup-in-content {
+	background: #fff;
+	border-radius: 5px;
+	padding: 60px 0 50px
+}
+
+.popup-in-txt {
+	max-width: 430px;
+	margin: 0 auto
+}
+
+.sign-content.popup-in-content .btn.signin_btn,.sign-content.popup-in-content .btn.signin_btn:focus {
+	width: 390px;
+	margin: 0 auto;
+	font-size: 18px
+}
+
+.vcimg {
+	padding: 0;
+	background: #fff
+}
+
+.vcimg img {
+	height: 44px
+}
