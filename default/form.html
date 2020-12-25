@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>系统首页</title>
+    <!--基础-->
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css">    
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <link href="/lib/fonticon/iconfont.css" rel="stylesheet" />
+    <script src="/lib/fonticon/iconfont.js"></script>
+    <!--表单-->
+    <script src="/lib/jquery-form/jquery.form.min.js"></script>
+    <script src="/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <!--页面-->
+    <link rel="stylesheet" href="/css/admin.bootstrap.css">
+    <link rel="stylesheet" href="/css/admin.layout.css">
+
+    <link rel="stylesheet" href="/css/admin.formpage.css">
+
+    <script src="/lib/bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
+    <link rel="stylesheet" href="/lib/bootstrap-treeview/dist/bootstrap-treeview.min.css">
+
+    <link rel="stylesheet" href="/lib/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css">
+    <script src="/lib/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    <script src="/lib/bootstrap-datepicker/dist/locales/bootstrap-datepicker.zh-CN.min.js"></script>
+
+    <script src="/lib/bootstrap-gridster/dist/jquery.gridstrap.min.js"></script>
+    <link rel="stylesheet" href="/lib/bootstrap-gridster/dist/jquery.gridstrap.min.css">
+
+    <script src="/lib/jquery-ztree/dist/js/jquery.ztree.all.min.js"></script>
+    <script src="/lib/jquery-ztree/ztreeModal.js"></script>
+    <script src="/lib/jquery-ztree/data.js"></script>
+    <link rel="stylesheet" href="/lib/jquery-ztree/dist/css/zTreeStyle/zTreeStyle.css">
+    <link rel="stylesheet" href="/lib/jquery-ztree/ztreeSelect.css"> 
+    <link rel="stylesheet" href="/lib/jquery-ztree/dist/css/metroStyle/metroStyle.css">
+</head>
+<body>
+    <!-- Left Panel -->
+    <aside id="left-panel" class="left-panel">
+        <nav class="navbar navbar-expand-sm navbar-default">
+
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="./"><img src="/images/admin_logo.png" alt="Logo"></a>
+                <a class="navbar-brand hidden" href="./"><img src="/images/admin_logo2.png" alt="Logo"></a>
+            </div>
+
+            <div id="main-menu" class="main-menu collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="index.html"> <i class="menu-icon fa fa-dashboard"></i>总览 </a>
+                    </li>
+                    <h3 class="menu-title">内容管理</h3>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>内容发布管理</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-puzzle-piece"></i><a href="list.html">内容管理</a></li>
+                            <li><i class="fa fa-id-badge"></i><a href="form.html">新增</a></li>
+                            <li><i class="fa fa-bars"></i><a href="dialog.html" class="DlgLink">弹窗表单</a></li>
+                            <li><i class="fa fa-share-square-o"></i><a href="list2.html">EMAIL</a></li>
+                            <li><i class="fa fa-id-card-o"></i><a href="list3.html">内容列表</a></li>
+                            <li><i class="fa fa-id-card-o"></i><a href="ui-cards.html">Cards</a></li>
+                            <li><i class="fa fa-exclamation-triangle"></i><a href="ui-alerts.html">Alerts</a></li>
+                            <li><i class="fa fa-spinner"></i><a href="ui-progressbar.html">Progress Bars</a></li>
+                            <li><i class="fa fa-fire"></i><a href="ui-modals.html">Modals</a></li>
+                            <li><i class="fa fa-book"></i><a href="ui-switches.html">Switches</a></li>
+                            <li><i class="fa fa-th"></i><a href="ui-grids.html">Grids</a></li>
+                            <li><i class="fa fa-file-word-o"></i><a href="ui-typgraphy.html">Typography</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>栏目管理</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-table"></i><a href="tables-basic.html">Basic Table</a></li>
+                            <li><i class="fa fa-table"></i><a href="tables-data.html">Data Table</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-th"></i>附件管理</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-th"></i><a href="forms-basic.html">Basic Form</a></li>
+                            <li><i class="menu-icon fa fa-th"></i><a href="forms-advanced.html">Advanced Form</a></li>
+                        </ul>
+                    </li>
+
+                    <h3 class="menu-title">用户/互动/营销</h3>
+
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-tasks"></i>用户管理</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-fort-awesome"></i><a href="font-fontawesome.html">Font Awesome</a></li>
+                            <li><i class="menu-icon ti-themify-logo"></i><a href="font-themify.html">Themefy Icons</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-weibo"></i>社交媒体</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-fort-awesome"></i><a href="font-fontawesome.html">Font Awesome</a></li>
+                            <li><i class="menu-icon ti-themify-logo"></i><a href="font-themify.html">Themefy Icons</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-area-chart"></i>互动工具</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-map-o"></i><a href="maps-gmap.html">Google Maps</a></li>
+                            <li><i class="menu-icon fa fa-street-view"></i><a href="maps-vector.html">Vector Maps</a></li>
+                        </ul>
+                    </li>
+                    <h3 class="menu-title">系统设置</h3>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-glass"></i>基本设置</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-sign-in"></i><a href="page-login.html">站点信息</a></li>
+                            <li><i class="menu-icon fa fa-sign-in"></i><a href="page-register.html">组织架构</a></li>
+                            <li><i class="menu-icon fa fa-paper-plane"></i><a href="pages-forget.html">邮件服务器设置</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-bar-chart"></i>站点统计</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="menu-icon fa fa-line-chart"></i><a href="charts-chartjs.html">Chart JS</a></li>
+                            <li><i class="menu-icon fa fa-area-chart"></i><a href="charts-flot.html">Flot Chart</a></li>
+                            <li><i class="menu-icon fa fa-pie-chart"></i><a href="charts-peity.html">Peity Chart</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </aside>
+    <!-- /#left-panel -->
+    <div id="right-panel"   class="right-panel">
+        <!-- Header-->
+        <header id="header" class="header fixed-top clearfix">              
+            <div class="pull-left">
+                <button id="menuToggle" class="btn btn-default menutoggle pull-left"><i class="fa fa fa-bars"></i></button>
+            </div>
+            <div class="pull-right">
+                <ul>
+                    <li>
+                        <button type="button"  class="btn btn-default btn-fullscreen  ">
+                            <i class="fa fa-arrows-alt"></i>
+                        </button>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button type="button"  class="btn btn-default dropdown-toggle"  data-toggle="dropdown">
+                                <i class="fa fa-bell-o" aria-hidden="true"></i>
+                                <span class="count bg-danger">9</span>
+                            </button>
+                            <div class="dropdown-menu noticemenu" >
+                                 <h5 class="title">消息中心</h5>
+                                 <ul>
+                                    <li>
+                                        <a href="">
+                                            <span class="badge badge-danger">4</span>
+                                            @我的
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <span class="badge badge-danger">4</span>
+                                            待审的文章
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <span class="badge badge-danger">4</span>
+                                            待审的评论
+                                        </a>
+                                    </li> 
+                                    <li>
+                                        <a href="">
+                                            <span class="badge badge-danger">4</span>
+                                            收到的赞
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <span class="badge badge-danger">4</span>
+                                            我的消息
+                                        </a>
+                                    </li> 
+                                    <li>
+                                        <a href="">
+                                            <span class="badge badge-danger">4</span>
+                                            系统通知
+                                        </a>
+                                    </li>
+                                 </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown  user-area">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                <img class="avatar-img" src="/images/avatar/7.jpg" alt="">
+                                <span class="user-avatar">张三丰 <span class="caret"></span></span>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownUserMenu">
+                                <a class="dropdown-item" href="#"><i class="fa fa-user" aria-hidden="true"></i> 个人中心</a>
+                                <a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> 修改资料</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i> 退出登录</a>
+                              </div>
+                          </div>
+
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <!-- / Header-->
+        <div class="content pd-15">
+            <div class="row">
+                <div class="col-lg-8  col-sm-12">
+                    <div class="card card-simple card-article-add">
+                         <div class="card-header">
+                             发表文章
+                         </div>
+                         <div class="card-body">
+                            <form>
+                                <div class="form-group row">
+                                    <label  class="col-sm-2 col-form-label">文章标题</label>
+                                    <div class="col-sm-7">
+                                        <input type="text" class="form-control" name="Title"   placeholder="请输入文章标题，最多60个字符" />
+                                    </div>
+                                    <div class="col-sm-2"> 
+                                        <a href="javascript:;" class="btn btn-itm btn-strong " style="font-weight: normal;"><i class="fa fa-bold" aria-hidden="true"></i></a>
+                                        <a href="javascript:;" class="btn btn-itm btn-font " style="font-weight: normal;"><i class="fa fa-font" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">副标题</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" name="Subtitle" placeholder="请输入副标题" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">所属分类</label>
+                                    <div class="col-sm-9">
+                                        <div class="form-init-drop">
+                                            <div class="input-group" style="position: relative;">
+                                                <input type="text" class="form-control" id="CategoryId"  data-ztreeId = 'SelectCategoryId' name="CategoryId" readonly="readonly" placeholder="请选择..." />
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text">
+                                                        <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <script type="text/javascript">
+                                            (new ztreeModal({
+                                                dropDom:$('#CategoryId'),
+                                                direction:'down',//up 上/down 下
+                                                fun:function(eId){
+                                                    /*初始化ztree*/
+                                                    var obj = this;
+                                                    this.objTree = $.fn.zTree.init($('#'+eId),{
+                                                    check: {
+                                                        enable : false,
+                                                        chkStyle: "checkbox"
+                                                    },
+                                                    data : {
+                                                        simpleData: {
+                                                            enable: true
+                                                        }
+                                                    },
+                                                    callback:{
+                                                        beforeClick:function(treeId, treeNode){
+                                                            var check = (treeNode && !treeNode.isParent);
+                                                            if (!check) 
+                                                            return false;
+                                                        },
+                                                        onClick: function (e, treeId, treeNode, clickFlag) { 
+                                                           
+                                                                 var treeObj = $.fn.zTree.getZTreeObj(eId),
+                                                                     nodes = treeObj.getSelectedNodes();
+                                                                    //var unitNode = nodes[0].getParentNode();
+                                                                    //var buildingNode=unitNode.getParentNode();
+                                                                    //var houseName=buildingNode.name+unitNode.name+nodes[0].name;
+                                                                    console.log(nodes[0].isParent)
+                                                                    if(!nodes[0].isParent){
+                                                                        obj.hideZtree(nodes[0].name);
+                                                                    }
+                                                                // if(nodes[0].level == 2){
+                                                                //     obj.hideZtree(nodes[0].name);//隐藏下拉菜单
+                                                                // }
+                                                            } 
+                                                        }
+                                                }, treeData);
+                                            }
+                                            }));
+                                        </script>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">作者</label>
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control" name="Author" placeholder="作者的署名" />
+                                    </div>
+                                    <label class="col-sm-2 col-form-label">来源</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" name="CopyFrom" placeholder="文章来源" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">摘要</label>
+                                    <div class="col-sm-9">
+                                        <textarea name="Abstract" class="form-control" placeholder="请输入摘要，不超过255个字符"  style="width: 100%;height: 120px;" ></textarea>
+                                    </div>                                    
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">封面图片</label>
+                                    <div class="col-sm-9">
+                                        <button class="btn btn-primary"><i class="fa fa-upload" aria-hidden="true"></i> 上传图片...</button>
+                                        <div id="basic-grid"  class="frontpic row">
+                                            <div class="col-sm-12 col-md-6">
+                                                <div class="uploadimg_itm">
+                                                    <a  href="####" class="btn-up btn-move">
+                                                        <i class="fa fa-arrows" aria-hidden="true"></i></a>
+                                                    <div class="left">
+                                                        <div class="imgbox">
+                                                            <img src="/images/test/12.jpg" alt="">
+                                                        </div>
+                                                        
+                                                        <a  href="####" class="btn-up  btn-up-del">
+                                                            <i class="fa fa-trash" aria-hidden="true"></i> 删除</a>
+                                                    </div>
+                                                    <div class="right">
+                                                        <textarea class="form-control" placeholder="请输入图片介绍" ></textarea>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="col-sm-12 col-md-6">
+                                                <div class="uploadimg_itm">
+                                                    <a  href="####" class="btn-up btn-move">
+                                                        <i class="fa fa-arrows" aria-hidden="true"></i></a>
+                                                    <div class="left">
+                                                        <div class="imgbox">
+                                                            <img src="/images/test/12.jpg" alt="">
+                                                        </div>
+                                                        
+                                                        <a  href="####" class="btn-up  btn-up-del">
+                                                            <i class="fa fa-trash" aria-hidden="true"></i> 删除</a>
+                                                    </div>
+                                                    <div class="right">
+                                                        <textarea class="form-control" placeholder="请输入图片介绍" ></textarea>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                             
+                                        </div>
+                                        <script>
+                                            $('#basic-grid').gridstrap();
+                                        </script>
+                                        <div class="imglist clearfix">
+                                            <!--
+                                            <div class="item">
+                                                <div class="imgbox">
+                                                    <img src="/images/test/12.jpg" alt="">
+                                                </div>
+                                                <div class="btns">
+                                                    <a href="####" class="btn-up btn-up-first">设为首选</a>
+                                                    <a  href="####" class="btn-up btn-up-del"><i class="fa fa-trash" aria-hidden="true"></i> 删除</a>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="imgbox">
+                                                    <img src="/images/test/13.jpg" alt="">
+                                                </div>
+                                                <div class="btns">
+                                                    <a href="####" class="btn-up btn-up-first">设为首选</a>
+                                                    <a  href="####" class="btn-up btn-up-del"><i class="fa fa-trash" aria-hidden="true"></i> 删除</a>
+                                                </div>
+                                            </div>
+                                             
+                                            <div class="item item-add">
+                                                <a class="imgbox" href="####">
+                                                    <i class="fa fa-cloud-upload" aria-hidden="true"></i><br>
+                                                    <span>点击上传</span>
+                                                </a>  
+                                            </div>
+                                            -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label"></label>
+                                    <div class="col-sm-9 attachment_list">
+                                        
+                                    </div>
+                                </div>
+                                <div class="form-group row form-content">
+                                    <!-- Nav tabs -->
+                                    <ul class="nav nav-tabs clearfix" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" data-toggle="tab" href="#home">正文内容</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="tab" href="#pdfcon">PDF文档</a>
+                                        </li>
+                                    </ul>
+
+                                    <!-- Tab panes -->
+                                    <div class="tab-content">
+                                        <div id="home" class="container tab-pane active">
+                                            <!-- 加载编辑器的容器 -->
+                                            <script id="container" name="content" type="text/plain"></script>
+                                            <!-- 配置文件 -->
+                                            <script type="text/javascript" src="/ueditor/ueditor.config.js"></script>
+                                            <!-- 编辑器源码文件 -->
+                                            <script type="text/javascript" src="/ueditor/ueditor.all.js"></script>
+                                            <!-- 实例化编辑器 -->
+                                            <script type="text/javascript">
+                                                var ue = UE.getEditor('container', {
+                                                    autoHeight: false,
+                                                    initialFrameHeight:460
+                                                });
+                                            </script>
+                                        </div>
+                                        <div id="pdfcon" class="container tab-pane">
+                                                <div class="row">
+                                                    <div class="pdfalert">
+                                                        请您上传PDF文档...  <br/><br/> <button class="btn btn-primary"><i class="fa fa-upload" aria-hidden="true"></i> 上传文档</button>
+                                                    </div>
+                                                </div>
+                                                <div class="row">                                                      
+                                                    <div class="col-sm-12" style="text-align: center;">
+                                                       
+                                                    </div>
+                                                </div>  
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row btnrow">
+                                    <div class="col-sm-12">
+                                        <button type="submit" class="btn btn-success btn-lg"><i class="fa fa-send"></i> 发布</button>
+                                        <button type="submit" class="btn btn-outline-secondary  btn-lg">
+                                            <i class="fa fa-save"></i>
+                                            保存为草稿</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4  col-sm-12 ">
+                    <div class="card card-simple card-article-add card-article-add-side">
+                         
+                        <div class="card-body">
+                            <form method="POST" action="">
+                                <div class="form-itm">
+                                    <div class="form-title" >附件</div>
+                                    <div class="form-group">                                    
+                                        <button class="btn btn-primary" type="button"><i class="fa fa-upload" aria-hidden="true"></i> 选择文件</button>
+                                        <div class="attachment-list">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-itm">
+                                    <div class="form-title" >发布时间</div>
+                                    <div class="form-group">                                    
+                                        <div class="input-group date">
+                                            <input type="text" class="form-control"  id="CreateTime" name="CreateTime" readonly="readonly" placeholder="请选择..." />
+                                            <div class="input-group-append">
+                                                <span class="input-group-text">
+                                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <script type="text/javascript">
+                                            $(document).ready(function(){
+                                                $("#CreateTime").datepicker({
+                                                    format: 'yyyy-mm-dd',//显示格式
+                                                    startView:0,
+                                                    minView:2,
+                                                    language: 'zh-CN',
+                                                    autoclose: 1,
+                                                    orientation:"bottom auto"
+                                                });
+                                            });
+                                                // $("#CreateTime").val("test")
+                                                // $("#CreateTime").datepicker({
+                                                //     format: 'yyyy-mm-dd',//显示格式
+                                                //     startView:2,
+                                                //     minView:2,
+                                                //     maxView :2,
+                                                //     language: 'zh-CN',
+                                                //     autoclose: 1,//选择后自动关闭
+                                                //     clearBtn:true,//清除按钮
+                                                // });
+                                            
+                                        </script>
+                                    </div>
+                                </div>
+
+                                <div class="form-itm">
+                                    <div class="form-title" >自动提取</div>
+                                    <div class="row pd-10" style="padding: 5px;">
+                                        <div class="col-sm-6">
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                  <input type="checkbox" class="form-check-input" value=""> 远程图片本地化
+                                                </label>
+                                              </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                  <input type="checkbox" class="form-check-input" value=""> 第一张图片设为封面
+                                                </label>
+                                              </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                  <input type="checkbox" class="form-check-input" value=""> 提取前200字为摘要
+                                                </label>
+                                              </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-itm">
+                                    <div class="form-title" >跳转地址</div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="LinkUrl" placeholder="请输入跳转地址..." >
+                                        <div class="row" style="padding: 5px;">
+                                            <div class="col-sm-6">
+                                                <div class="form-check">
+                                                    <label class="form-check-label">
+                                                      <input type="checkbox" class="form-check-input" value=""> 启用跳转
+                                                    </label>
+                                                  </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-itm">
+                                    <div class="form-title" >发布渠道</div>
+                                    <div class="form-group">
+                                        <div class="row pd-10" style="padding: 5px;">
+                                            <div class="col-sm-6">
+                                                <div class="form-check">
+                                                    <label class="form-check-label">
+                                                      <input type="checkbox" class="form-check-input" value=""> PC网站/Wap
+                                                    </label>
+                                                  </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-check">
+                                                    <label class="form-check-label">
+                                                      <input type="checkbox" class="form-check-input" value=""> APP
+                                                    </label>
+                                                  </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-check">
+                                                    <label class="form-check-label">
+                                                      <input type="checkbox" class="form-check-input" value=""> 小程序
+                                                    </label>
+                                                  </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="form-itm">
+                                    <div class="form-title" >模板</div>
+                                    <div class="form-group">
+                                        <select class="form-control">
+                                            <option selected="">默认模板</option>
+                                            <option value="Contents/Default.cshtml">Contents/Default.cshtml</option>
+                                            <option value="Contents/Picture.cshtml">Contents/Picture.cshtml</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-itm">
+                                    <div class="form-title" >移动端模板</div>
+                                    <div class="form-group">
+                                        <select class="form-control">
+                                            <option selected="">默认模板</option>
+                                            <option value="Contents/MobileDefault.cshtml">Contents/MobileDefault.cshtml</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-itm">
+                                    <div class="form-title" >推送位</div>
+                                    <div class="chklist"  >
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input type="checkbox" class="form-check-input" value=""> PC网站/Wap
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input type="checkbox" class="form-check-input" value=""> PC网站/Wap
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input type="checkbox" class="form-check-input" value=""> PC网站/Wap
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                              <input type="checkbox" class="form-check-input" value=""> PC网站/Wap
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        
+    </div>
+
+
+ 
+    <script src="/lib/popper/popper.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/js/admin.framework.js"></script>
+    <script src="/lib/jquery-cookie/jquery.cookie.js"></script> 
+
+    <script src="/js/admin.site.js"></script>
+</body>
+</html>

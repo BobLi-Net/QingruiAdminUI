@@ -1,0 +1,226 @@
+.card-article-add{
+    padding: 15px;
+}
+.card-article-add .card-header{
+    font-weight: bold;
+    padding: 10px 0px 25px 20px;
+    border-bottom: 1px solid #ddd;
+    font-size: 18px;
+}
+.card-article-add .card-body label{text-align: right;}
+/*缩略图*/
+.card-article-add .imglist{
+    padding: 10px 0px;  
+    margin-left: -14px;
+}
+.card-article-add .imglist .item{
+     
+    width: 25%; 
+    min-width: 130px;
+    max-width: 160px;  
+    height: 155PX;
+    padding: 0PX;  
+    vertical-align: middle;
+    margin: 10px 12.5px;
+    float: left;
+    background: #F3F3F3;
+    position: relative;
+}
+.card-article-add .imglist .item img{max-width: 100%; max-height:155px ;}
+.card-article-add .imglist .item .imgbox{
+    height: 155px;
+    display: table-cell;
+    vertical-align: middle;
+}
+.card-article-add .imglist .item .btns{
+    position: absolute;
+    bottom: 0px; 
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    color: #FFF;
+}
+.card-article-add .imglist .item .btns a.btn-up{
+    color: #FFF;
+    display:block;
+    float: left;
+    font-size: 12px;
+    padding: 8px 10px;
+    width: 49.5%;
+    text-align: center;
+}
+.card-article-add .imglist .item .btns a.btn-up:hover{
+    background: rgba(0, 0, 0, 0.8);
+}
+.card-article-add .imglist .item .btns a.btn-up-del{
+    float: right;
+    border-left:1px solid rgba(255, 255, 255, 0.1) 
+}
+.card-article-add .imglist .item .btns a.btn-up-del:hover{
+    background-color: rgba(255, 0, 0, 0.6);
+}
+.card-article-add .imglist .item-add{
+    background: none;
+}
+.card-article-add .imglist .item-add .imgbox{
+    text-align: center;
+    width: 100%;
+    display: block;
+    padding-top: 30PX;
+    font-size: 30px;
+    border: 1px dashed #DDD;
+    color: darkcyan;
+    border-radius: 10px;
+}
+.card-article-add .imglist .item-add .imgbox span{
+    font-size: 13px;
+}
+.card-article-add .imglist .item-add .imgbox:hover{
+    background-color: #F3F3F3;
+}
+/*缩略图*/
+.uploadimg_itm{
+    padding: 5px;
+    height: 125px;   
+}
+.uploadimg_itm .left{
+    width: 45%;
+    max-width: 260px;
+    float: left;
+    display: table;
+    height: 125px;
+    background-color: #F0F0F0;
+    position: relative; 
+}
+.uploadimg_itm .left .imgbox{
+    height: 125px;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+
+.uploadimg_itm .left img{
+    width:100%;
+    max-height: 125px;
+}
+.uploadimg_itm .left .btn-up-del{
+    position: absolute;
+    bottom: 0px; 
+    right: 0px;
+    padding: 5px 15px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #FFF;
+    display: none;
+}
+.uploadimg_itm .left .btn-up-del:hover{
+    position: absolute;
+    bottom: 0px; 
+    right: 0px;
+    padding: 5px 15px;
+    text-align: center;
+    background-color: rgba(255 , 0, 0, 0.6);
+    color: #FFF;
+}
+.uploadimg_itm   .btn-move{
+    position: absolute;
+    display: block;
+    top:-10px; 
+    right: 0px;
+    padding: 5px 15px;
+    text-align: center;
+    background-color: rgba(255 , 0, 0, 0);
+    color: #999;
+}
+.uploadimg_itm .right{
+    width: 54%;
+    max-width: 260px;
+    float: right;
+}
+.uploadimg_itm .right textarea{
+    height: 123px;
+}
+
+
+.content{
+    position: relative;
+}
+.formbtns{
+    position: fixed;
+    bottom: 0px;
+    z-index: 9999;
+    background: #FFF;
+    padding: 20PX 0PX;
+    width: 100%;
+    text-align: left;
+    padding-left: 30px;
+}
+.btnrow{
+    text-align: center;
+    padding: 20px;
+}
+
+.card-article-add .form-content{
+    padding: 20px;
+}
+.card-article-add .form-content .nav-tabs{
+    width: 100%;
+}
+.card-article-add .tab-content{
+    padding: 0px;
+    width: 100%;
+}
+.card-article-add .form-content .container{
+    padding: 0px;
+    width: 100%;
+}
+.card-article-add .nav-tabs {
+    
+    border: none;
+}
+.card-article-add .nav-tabs .nav-item a{
+    border-radius: 0px;
+    border: none;
+}
+.card-article-add .nav-tabs .nav-item .active{
+    background-color: #3377FF;
+    color: #FFF;
+}
+
+.card-article-add .form-check{
+    padding: 3px 0px;
+    padding-left: 1.05rem;
+    color: #888;
+}
+.card-article-add-side{
+    padding: 10px;
+}
+.card-article-add-side .card-body{
+    padding: 0px;
+}
+.card-article-add-side .form-itm{
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 18px;
+}
+.card-article-add-side .form-title{
+    padding:15px 0px;
+    
+}
+.card-article-add-side .form-group{
+    margin-bottom: 0px;
+}
+
+.pdfalert{
+    padding: 10px;
+    border: 2px dotted #ddd;
+    background: #FCFCFC;
+    margin: 25px;
+    width: 100%;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 35px;
+    font-size: 14px;
+    color: #888;
+}
